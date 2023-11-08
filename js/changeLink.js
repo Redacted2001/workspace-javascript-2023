@@ -1,0 +1,1 @@
+$('body').hide().fadein(1000);

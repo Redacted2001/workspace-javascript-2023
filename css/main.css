@@ -126,7 +126,7 @@ textarea {
 .img-container {
     position: fixed;
     width: 70%;
-    top: 10%;
+    top: 5%;
     left: 15%;
     margin: 0 auto;
     padding: 0 auto;
@@ -137,7 +137,7 @@ textarea {
 .img-container-hide {
     position: fixed;
     width: 70%;
-    top: 10%;
+    top: 5%;
     left: 15%;
     margin: 0 auto;
     padding: 0 auto;

@@ -420,6 +420,38 @@
                     <td id="r6"></td>
                 </tr>
             </table>
+            <script>
+                var statistics = [0,0,0,0,0,0]
+
+                //event and event handler
+                function rollD(){
+                    var n = Math.floor(Math.random()*7);
+                    console.log(n);
+                    statistics[n+1]+= 1;
+
+                    var e = document.getElementById("dieimage");
+                    document.getElementById("r"+n).textContent= statistics[n-1].toString();
+                    e.setAttribute("src","img/die"+n+".png");
+                    
+
+                }
+                document.getElementById("roll").addEventListener('click',rollD,false);
+
+                /*
+                //array practice
+                var testarray = [1,2,3,4,5,6];
+                testarray.push(12);
+                testarray.pop(1);
+                console.log(testarray);
+
+                for(var i in testarray){
+                    console.log(i,testarray[i]);
+
+                }
+                testarray.forEach(e => console.log(e));
+                */
+
+            </script>
 
         </div>
 
@@ -442,7 +474,17 @@
                 <img src="img/usca5.jpg" alt="usca">
             </div>
             <script>
-
+                var imagelist = document.querySelectorAll(".img-container-hide");
+                var index = 0;
+                imagelist[index].setAttribute("class","img-container");
+                
+                function bannerU(){
+                    imagelist[index].setAttribute("class","ing-container-hide");
+                    index++;
+                    index = index % 5;
+                    imagelist[index].setAttribute("class","img-container");
+                }
+                setInterval(bannerU,5000);
             </script>
 
 
